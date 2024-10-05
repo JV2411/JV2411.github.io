@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Binito</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="logo.binito.negro.jpg" alt="logo">
+    <h1>BINITO</h1>
+
+    <nav id="navegador" class="navegacion">
+      <ul>
+        <li><a href="reservas.html">RESERVAS</a></li>
+        <li><a href="Carta.html">CARTA</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
+        <li><a href="nuestro_local.html">NUESTRO LOCAL</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" class="icono" onclick="MiFuncion()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </header>
+
+  <main>
+    <picture>
+      <source media="(min-width: 1200px)" srcset="vino0oo_large.jpeg">
+      <source media="(min-width: 768px)" srcset="vino0oo_medium.jpeg">
+      <img class="banner" src="vino0oo_small.jpeg" alt="Banner de vino">
+    </picture>
+
+    <div class="cajacontenedora">
+      <div class="caja">
+        <h2>TAPEOS</h2>
+        <picture>
+          <source media="(min-width: 768px)" srcset="tapeo-grande.jpeg">
+          <source media="(min-width: 480px)" srcset="tapeo-mediano.jpeg">
+          <img src="tapeo-pequeno.jpeg" alt="TAPEOS">
+        </picture>
+      </div>
+      
+      <div class="caja">
+        <h2>VIÑEDO</h2>
+        <picture>
+          <source media="(min-width: 768px)" srcset="vinedo-grande.jpeg">
+          <source media="(min-width: 480px)" srcset="vinedo-mediano.jpeg">
+          <img src="vinedo-pequeno.jpeg" alt="Viñedo">
+        </picture>
+      </div>
+      
+      <div class="caja">
+        <h2>DESGUSTACIÓN</h2>
+        <picture>
+          <source media="(min-width: 768px)" srcset="desgustacion-grande.jpeg">
+          <source media="(min-width: 480px)" srcset="desgustacion-mediano.jpeg">
+          <img src="desgustacion-pequeno.jpeg" alt="Desgustaciones">
+        </picture>
+      </div>
+      <style>
+        .iframe-container {
+            width: 728px;
+            height: 90px;
+            margin: 0 auto; /* Centra el iframe */
+        }
+    
+        @media (max-width: 600px) {
+            .iframe-container {
+                width: 300px;
+                height: 600px;
+            }
+        }
+    </style>
+    
+    <div class="iframe-container">
+        <iframe src="anuncio.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+    </div>
+    
+  </main>
+
+  <script>
+    function MiFuncion() {
+      var x = document.getElementById("navegador");
+      if (x.className === "navegacion") {
+        x.className += " responsive";
+      } else {
+        x.className = "navegacion";
+      }
+    }
+  </script>
+  <footer>
+    <div class="footer-content">
+        <div class="LOGOS-REDES">
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <img src="tik-tok.png" alt="TikTok">
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank">
+                <img src="whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+        <p>&copy; 2024 Binito. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

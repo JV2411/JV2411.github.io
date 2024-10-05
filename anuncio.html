@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncio Adaptable</title>
+    <style>
+        /* Estilos generales */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Contenedor general del anuncio */
+        .anuncio-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagen del anuncio para computadoras (728x90px) */
+        @media (min-width: 601px) {
+            .anuncio-img {
+                width: 728px;
+                height: 90px;
+            }
+        }
+
+        /* Imagen del anuncio para móviles (300x600px) */
+        @media (max-width: 600px) {
+            .anuncio-img {
+                width: 300px;
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor del anuncio -->
+    <div class="anuncio-container">
+        <!-- Carga la imagen correcta dependiendo del tamaño de la pantalla -->
+        <picture>
+            <source media="(max-width: 600px)" srcset="anuncio-binito.png">
+            <img src="anuncio-binito-2.png" alt="Anuncio de Happy Hour" class="anuncio-img">
+        </picture>
+    </div>
+
+</body>
+</html>
